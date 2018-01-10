@@ -1,0 +1,12 @@
+{{#partial "content"}}
+    {{#if shoppinglist}}
+    <h2>Shopping List: </h2>
+    <ul>
+        {{#each shoppinglist}}
+        <li>{{name}} {{manufacturer}} {{price}}</li>
+        {{/each}}
+    </ul>
+    {{/if}}
+{{/partial}}
+
+{{> layout.hbs}}

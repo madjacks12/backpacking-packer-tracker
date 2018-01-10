@@ -1,0 +1,12 @@
+{{#partial "content"}}
+    {{#if packinglist}}
+        <h2>Shopping List: </h2>
+        <ul>
+            {{#each packinglist}}
+                <li>{{name}} {{weight}}</li>
+            {{/each}}
+        </ul>
+    {{/if}}
+{{/partial}}
+
+{{> layout.hbs}}

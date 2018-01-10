@@ -1,0 +1,32 @@
+
+{{#partial "content"}}
+    <h1>Item list!</h1>
+    {{#if items}}
+        <h2>All Items:</h2>
+        <table style="width:100%">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Purchased?</th>
+            <th>Weight</th>
+            <th>Manufacturer</th>
+            <th>Packed?</th>
+        </tr>
+        {{#each items}}
+            <tr>
+                <th>{{name}}</th>
+                <th>{{price}}</th>
+                <th>{{purchased}}</th>
+                <th>{{weight}}</th>
+                <th>{{manufacturer}}</th>
+                <th>{{packed}}</th>
+            </tr>
+        {{/each}}
+        </table>
+    {{else}}
+        <p>No items added yet</p>
+    {{/if}}
+
+{{/partial}}
+
+{{> layout.hbs}}
