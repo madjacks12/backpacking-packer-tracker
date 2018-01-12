@@ -28,7 +28,8 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             String name = request.queryParams("name");
             int price = Integer.parseInt(request.queryParams("price"));
-            boolean purchased = Boolean.getBoolean(request.queryParams("purchased"));
+            boolean purchased = Boolean.parseBoolean(request.queryParams("purchased"));
+            System.out.print(purchased);
             String manufacturer = request.queryParams("manufacturer");
             int weight = Integer.parseInt(request.queryParams("weight"));
             Item newItem = new Item(name, price, purchased, weight, manufacturer);

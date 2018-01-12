@@ -79,4 +79,9 @@ public class ItemTest {
         Item purchasedItemTest = setupPurchasedItem();
         assertEquals(3, Item.getAllUnpurchased().size());
     }
+    @Test
+    public void setUnpurchased_returnsPurchased_true() throws Exception {
+        Item testItem = setupPurchasedItem();
+        assertEquals(true, testItem.isPurchased());
+    }
 }
